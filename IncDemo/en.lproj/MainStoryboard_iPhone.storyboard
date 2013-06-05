@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="2.0" toolsVersion="3084" systemVersion="11G63" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="2">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="2083"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="5">
+            <objects>
+                <viewController id="2" customClass="ViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="3">
+                        <rect key="frame" x="0.0" y="20" width="320" height="548"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8jx-Rx-X3K">
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ba1-g5-ara">
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="99" id="r0f-o8-cSh"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <state key="normal" title="Button">
+                                    <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="highlighted">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="ButtonPressed" destination="2" eventType="touchUpInside" id="Hv2-YK-fCx"/>
+                                </connections>
+                            </button>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="PZC-Iz-eNM">
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="161" id="dTv-Bb-LcF"/>
+                                </constraints>
+                                <segments>
+                                    <segment title="+"/>
+                                    <segment title="-"/>
+                                </segments>
+                                <connections>
+                                    <action selector="SegmentChanged" destination="2" eventType="valueChanged" id="YpK-r8-VFS"/>
+                                </connections>
+                            </segmentedControl>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="PZC-Iz-eNM" firstAttribute="top" secondItem="3" secondAttribute="top" constant="205" id="K1j-1i-HbL"/>
+                            <constraint firstItem="PZC-Iz-eNM" firstAttribute="centerX" secondItem="ba1-g5-ara" secondAttribute="centerX" type="default" id="hTt-LX-3g8"/>
+                            <constraint firstItem="PZC-Iz-eNM" firstAttribute="centerX" secondItem="3" secondAttribute="centerX" type="default" id="l7w-VE-tnq"/>
+                            <constraint firstItem="8jx-Rx-X3K" firstAttribute="top" secondItem="3" secondAttribute="top" constant="68" id="pLh-Ch-2eM"/>
+                            <constraint firstItem="ba1-g5-ara" firstAttribute="top" secondItem="3" secondAttribute="top" constant="128" id="pcC-gm-mwj"/>
+                            <constraint firstItem="ba1-g5-ara" firstAttribute="centerX" secondItem="8jx-Rx-X3K" secondAttribute="centerX" type="default" id="ya5-IU-29B"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="Button" destination="ba1-g5-ara" id="hob-zE-9h5"/>
+                        <outlet property="Label" destination="8jx-Rx-X3K" id="aRe-le-zV5"/>
+                        <outlet property="Segment" destination="PZC-Iz-eNM" id="Ks8-QR-PBH"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="4" sceneMemberID="firstResponder"/>
+            </objects>
+        </scene>
+    </scenes>
+    <simulatedMetricsContainer key="defaultSimulatedMetrics">
+        <simulatedStatusBarMetrics key="statusBar"/>
+        <simulatedOrientationMetrics key="orientation"/>
+        <simulatedScreenMetrics key="destination" type="retina4"/>
+    </simulatedMetricsContainer>
+</document>
